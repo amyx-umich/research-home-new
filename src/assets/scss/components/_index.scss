@@ -302,12 +302,10 @@
                     width: 100%;
                     position: absolute;
                     left: 0;
-                    // bottom: -7.5rem;
                     transition: all ease;
                     transform: translate3d(0, 0, 0);
                     transform-origin: 50% 50%;
                     transform: perspective(1px) translateZ(0);
-                    // box-shadow: 0 0 1px transparent;
                     transition-duration: 0.5s;
                     opacity: .75;
                     overflow: visible;
@@ -320,7 +318,7 @@
                         circle {
                             stroke: $michigan-maize;
                             stroke-width: 6;
-                            stroke-dasharray: 0.35, 1.25;
+                            stroke-dasharray: 0.35, 2.25;
                         }
                     }
                     @include breakpoint(768px down) {
@@ -498,7 +496,10 @@
                         background-color: $white-100;
                         margin: 0 auto;
                         svg {
-                            margin: .875rem;
+                            margin-top: .875rem;
+                            margin-right: .875rem;
+                            margin-bottom: 0;
+                            margin-left: .875rem;
                             padding: 0;
                             display: block;
                         }
@@ -513,6 +514,7 @@
                         }
                         p {
                             color: $black;
+                            line-height: 1.2;
                         }
                         .cta {
                             font-family: $header-font-family;
@@ -527,7 +529,7 @@
                     }
                     .text-box {
                         .cta {
-                            color: $tappan-red;
+                            color: $primary-color;
                         }
                     }
                     .blue {
@@ -564,34 +566,30 @@
             margin-bottom: 2rem;
         }
         .quote-container {
-            padding: 1rem;
-            border: 1px solid $tappan-red;
-            box-shadow: 0 0 0 $tappan-red;
+            color: $white;
+            padding: 0 0 1rem;
+            border: 2px solid darken($michigan-blue, 4%);
+            background-color: $michigan-blue;
             transition: all .2s ease;
             &:before {
                 content: '\201D';
-                font-family: $body-font-family;
-                font-size: 9rem;
+                font-family: $super-header-font-family;
+                font-size: 10rem;
                 font-weight: 700;
-                color: $tappan-red;
-                background-color: $body-background;
-                display: inline-block;
+                color: $michigan-maize;
                 padding: 1rem;
-                margin-top: -4.75rem;
                 line-height: 1;
-                height: 6rem;
+                display: inline;
+                margin-bottom: 0;
             }
-            &:hover,
-            &:focus {
-                box-shadow: -5px 5px 0 $tappan-red;
-            }
+
             .the-quote {
-                color: $black;
+                color: $white;
                 border: 0;
                 font-size: 3rem;
                 font-style: italic;
                 line-height: 1.2;
-                margin-top: -3.75rem;
+                margin-top: -6.5rem;
                 @include breakpoint(small only) {
                     font-size: 1.5rem;
                 }
@@ -599,8 +597,9 @@
             cite {
                 font-family: $header-font-family;
                 font-style: normal;
-                color: $black;
                 font-size: 1.25rem;
+                color: $white;
+
                 @include breakpoint(small only) {
                     font-size: 1rem;
                 }
@@ -609,10 +608,10 @@
                 a {
                     font-family: $header-font-family;
                     font-weight: bold;
-                    color: darken($tappan-red, 15%);
+                    color: lighten($michigan-maize, 15%);
                     transition: all .2s ease-in-out;
                     &:hover {
-                        color: $tappan-red;
+                        color: $michigan-maize;
                     }
                 }
                 @include breakpoint(small only) {
@@ -645,7 +644,7 @@
                 margin-bottom: $global-padding;
                 line-height: 1;
                 svg {
-                    color: $ross-orange;
+                    color: $michigan-blue;
                 }
                 span {
                     margin-left: .5rem;
@@ -658,7 +657,7 @@
                     color: $black;
                     transition: all .2s ease-in-out;
                     &:hover {
-                        color: $tappan-red;
+                        color: $arboretum-blue;
                     }
                 }
             }
@@ -673,22 +672,9 @@
                     transition: all .2s ease-in-out;
                     &:hover,
                     &:focus {
-                        color: $tappan-red;
-                        .image {
-                            img {
-                                opacity: 1;
-                                box-shadow: -5px 5px 0 $ross-orange;
-                            }
-                        }
+                        color: $primary-color;
                     }
-                    .image {
 
-                        img {
-                            opacity: .8;
-                            transition: all 0.2s;
-                            box-shadow: 0 0 0 $ross-orange;
-                        }
-                    }
                     .text {
                         padding-left: $global-padding;
                         @include breakpoint(small only) {
@@ -698,14 +684,15 @@
                         .hed {
                             font-family: $header-font-family;
                             font-weight: 700;
-                            font-size: 1.85rem;
+                            font-size: 1.75rem;
                             line-height: 1.2;
                             @include breakpoint(small only) {
                                 font-size: .9rem;
                             }
                         }
                         .dek {
-                            font-size: 1.125rem;
+                            font-size: 1rem;
+                            line-height: 1.2;
                             margin-bottom: 0;
                             @include breakpoint(small only) {
                                 font-size: .9rem;
@@ -734,40 +721,40 @@
                 padding-bottom: 0;
                 border: 0;
                 background-color: transparent;
-                .wunderground {
+                .custom-block {
                     background-color: $arboretum-blue;
                     margin-bottom: 1rem;
-                    @include breakpoint(medium down) {
-                        min-height: 18.75rem;
-                    }
-                    .weather-widget {
-                        height: 35%;
+                    .custom-widget {
                         background-color: $michigan-blue;
-                        .widget {
-                            margin-top: 3rem;
-                            a {
-                                img {
-                                    box-shadow: 0 0 0 $michigan-maize;
+                        .widget {}
+                    }
+                    .copy {
+                        .column {
+                            h3 {
+                                a {
+                                    font-family: 'Pathway Gothic One';
+                                    text-transform: uppercase;
+                                    color: $white;
+                                    font-size: 2.5rem;
+                                    line-height: 1.5;
                                     transition: all .2s ease-in-out;
                                     &:hover {
-                                        box-shadow: -5px 5px 0 $tappan-red;
+                                        color: $michigan-maize;
                                     }
                                 }
                             }
-                        }
-                    }
-                    .copy {
-                        height: 65%;
-                        .column {
-                            a {
-                                font-family: 'Pathway Gothic One';
-                                text-transform: uppercase;
-                                color: $white;
-                                font-size: 2.75rem;
-                                line-height: .9;
-                                transition: all .2s ease-in-out;
-                                &:hover {
-                                    color: $michigan-maize;
+                            p {
+                                a {
+                                    color: $white;
+                                    font-size: 1rem;
+                                    line-height: 1.5;
+                                    transition: all .2s ease-in-out;
+                                    &:hover {
+                                        color: $michigan-maize;
+                                    }
+                                    .cta {
+                                        color: $michigan-maize;
+                                    }
                                 }
                             }
                         }
@@ -810,7 +797,11 @@
                         padding-left: $global-padding;
                         padding-right: $global-padding;
 
-                        .row {
+                        .row {}
+
+                        a {
+                            color: $white;
+                            transition: all .2s ease-in-out;
                             margin-bottom: 2rem;
                             &:last-child {
                                 margin-bottom: 0;
@@ -820,35 +811,31 @@
                                     margin-bottom: 2rem;
                                 }
                             }
-                        }
-                        .title {
-                            margin-bottom: 0;
-                            line-height: 1.2;
-                            font-size: 1.25rem;
-                            font-family: $header-font-family;
-                            font-weight: 700;
-                        }
-                        .location {
-                            margin-bottom: 0;
-                            line-height: 1.2;
-                            font-size: 1rem;
-                        }
-                        .date {
-                            margin-right: 10px;
-                            .month,
-                            .day {
-                                font-family: $super-header-font-family;
-                                color: lighten($arboretum-blue, 19.75%);
-                                padding-right: 5px;
-                                border-right: 2px solid lighten($arboretum-blue, 19.75%);
-                                font-size: 2.25rem;
-                                text-transform: uppercase;
-                                line-height: 1;
+                            .title {
+                                margin-bottom: 0;
+                                line-height: 1.2;
+                                font-size: 1.25rem;
+                                font-family: $header-font-family;
+                                font-weight: 700;
                             }
-                        }
-                        a {
-                            color: $white;
-                            transition: all .2s ease-in-out;
+                            .location {
+                                margin-bottom: 0;
+                                line-height: 1.2;
+                                font-size: 1rem;
+                            }
+                            .date {
+                                margin-right: 10px;
+                                .month,
+                                .day {
+                                    font-family: $super-header-font-family;
+                                    color: $white;
+                                    padding-right: 5px;
+                                    border-right: 2px solid lighten($arboretum-blue, 19.75%);
+                                    font-size: 2.25rem;
+                                    text-transform: uppercase;
+                                    line-height: 1;
+                                }
+                            }
                             &:hover {
                                 color: $michigan-maize;
                                 .month,
@@ -968,6 +955,7 @@
             }
         }
         .caption {
+            line-height: 1.2;
             font-family: $header-font-family;
             font-size: 1.25rem;
             font-weight: 700;
@@ -984,7 +972,11 @@
                 margin-bottom: 1rem;
             }
             .dek {
-                line-height: 1.5;
+                line-height: 1.2;
+                padding-right: 1.5rem;
+                @include breakpoint(medium down) {
+                    padding-right: 0;
+                }
             }
             .cta {
                 color: $michigan-maize;
