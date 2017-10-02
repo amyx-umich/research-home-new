@@ -274,7 +274,8 @@
         }
     }
     .stats {
-        background: linear-gradient(160deg, $arboretum-blue, $michigan-blue);
+        background: $michigan-blue;
+        margin-bottom: 2rem;
         padding: 5rem 0;
         font-family: $header-font-family;
         font-size: 1.125rem;
@@ -301,24 +302,25 @@
                     width: 100%;
                     position: absolute;
                     left: 0;
-                    bottom: -7.5rem;
+                    // bottom: -7.5rem;
                     transition: all ease;
                     transform: translate3d(0, 0, 0);
                     transform-origin: 50% 50%;
                     transform: perspective(1px) translateZ(0);
-                    box-shadow: 0 0 1px transparent;
+                    // box-shadow: 0 0 1px transparent;
                     transition-duration: 0.5s;
-                    opacity: .5;
+                    opacity: .75;
                     overflow: visible;
                     &:hover,
                     &:focus,
                     &:active {
-                        transform: translate3d(0, 0, 0) scale(1.05);
+                        transform: translate3d(0, 0, 0) scale(1.025);
                         transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
                         opacity: 1;
                         circle {
                             stroke: $michigan-maize;
-                            stroke-dasharray: 0 2.875;
+                            stroke-width: 6;
+                            stroke-dasharray: 0.35, 1.25;
                         }
                     }
                     @include breakpoint(768px down) {
@@ -357,16 +359,12 @@
         }
     }
     .aud-row {
-        margin-top: 1px;
         margin-bottom: 5rem;
         @include breakpoint(small only) {
             margin-bottom: 2rem;
         }
         .column {
-            border-right: 1px solid $faintest-gray;
-            &:last-child {
-                border-right: 0;
-            }
+
             @include breakpoint(medium down) {
                 margin-bottom: 2rem;
                 &:nth-child(2) {
@@ -380,30 +378,23 @@
                 color: $black;
                 .image {
                     z-index: 0;
-                    position: relative;
                     filter: grayscale(.75) sepia(0.15);
                     transform: translate3d(0, 0, 0);
                     transition: all .2s ease-in-out;
                 }
                 .text-box {
-                    width: 85%;
                     padding: 0 .5rem;
-                    margin: -2.625rem auto 0;
+                    margin: 0 auto;
                     background-color: $white-100;
                     border-width: 1px;
                     border-style: solid;
+                    border-color: $light-gray;
                     transform: translate3d(0, 0, 0);
                     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
                     z-index: 1;
-                    position: relative;
-                    @include breakpoint(small only) {
-                        width: 92%;
-                    }
                     &.blue {
-                        border-color: $michigan-blue;
                         box-shadow: 0 0 0 $michigan-blue;
                         .icon {
-                            border: 2px solid $michigan-blue;
                             svg {
                                 color: $michigan-blue;
                             }
@@ -415,15 +406,11 @@
                         }
                         &:hover,
                         &:focus {
-                            top: -0.0625rem;
-                            border-color: $michigan-blue;
-                            box-shadow: -5px 5px 0 $michigan-blue;
+                            box-shadow: 0px 2px 0 $michigan-blue;
                         }
                     }
                     &.maize {
-                        border-color: $michigan-maize;
                         .icon {
-                            border: 2px solid $michigan-maize;
                             svg {
                                 color: $michigan-maize;
                             }
@@ -435,9 +422,7 @@
                         }
                     }
                     &.red {
-                        border-color: $tappan-red;
                         .icon {
-                            border: 2px solid $tappan-red;
                             svg {
                                 color: $tappan-red;
                             }
@@ -449,9 +434,7 @@
                         }
                     }
                     &.light-blue {
-                        border-color: $arboretum-blue;
                         .icon {
-                            border: 2px solid $arboretum-blue;
                             svg {
                                 color: $arboretum-blue;
                             }
@@ -463,9 +446,7 @@
                         }
                     }
                     &.orange {
-                        border-color: $ross-orange;
                         .icon {
-                            border: 2px solid $ross-orange;
                             svg {
                                 color: $ross-orange;
                             }
@@ -477,9 +458,7 @@
                         }
                     }
                     &.teal {
-                        border-color: $taubman-teal;
                         .icon {
-                            border: 2px solid $taubman-teal;
                             svg {
                                 color: $taubman-teal;
                             }
@@ -491,9 +470,7 @@
                         }
                     }
                     &.green {
-                        border-color: $wave-field-green;
                         .icon {
-                            border: 2px solid $wave-field-green;
                             svg {
                                 color: $wave-field-green;
                             }
@@ -505,9 +482,7 @@
                         }
                     }
                     &.purple {
-                        border-color: $a2-amethyst;
                         .icon {
-                            border: 2px solid $a2-amethyst;
                             svg {
                                 color: $a2-amethyst;
                             }
@@ -520,12 +495,8 @@
                     }
                     .icon {
                         width: 4rem;
-                        margin-bottom: -1.75rem;
                         background-color: $white-100;
-                        border-radius: 2rem;
                         margin: 0 auto;
-                        position: relative;
-                        top: -1.875rem;
                         svg {
                             margin: .875rem;
                             padding: 0;
@@ -538,7 +509,6 @@
                             text-transform: uppercase;
                             font-weight: normal;
                             font-size: 1.875rem;
-                            margin-top: -1.875rem;
                             margin-bottom: 0;
                         }
                         p {
@@ -556,34 +526,33 @@
                         filter: grayscale(0) sepia(0);
                     }
                     .text-box {
-                        top: -0.0625rem;
                         .cta {
                             color: $tappan-red;
                         }
                     }
                     .blue {
-                        box-shadow: -5px 5px 0 $michigan-blue;
+                        box-shadow: 0 2px 0 $michigan-blue;
                     }
                     .light-blue {
-                        box-shadow: -5px 5px 0 $arboretum-blue;
+                        box-shadow: 0 2px 0 $arboretum-blue;
                     }
                     .red {
-                        box-shadow: -5px 5px 0 $tappan-red;
+                        box-shadow: 0 2px 0 $tappan-red;
                     }
                     .orange {
-                        box-shadow: -5px 5px 0 $ross-orange;
+                        box-shadow: 0 2px 0 $ross-orange;
                     }
                     .yellow {
-                        box-shadow: -5px 5px 0 $michigan-maize;
+                        box-shadow: 0 2px 0 $michigan-maize;
                     }
                     .purple {
-                        box-shadow: -5px 5px 0 $a2-amethyst;
+                        box-shadow: 0 2px 0 $a2-amethyst;
                     }
                     .green {
-                        box-shadow: -5px 5px 0 $wave-field-green;
+                        box-shadow: 0 2px 0 $wave-field-green;
                     }
                     .teal {
-                        box-shadow: -5px 5px 0 $taubman-teal;
+                        box-shadow: 0 2px 0 $taubman-teal;
                     }
                 }
             }

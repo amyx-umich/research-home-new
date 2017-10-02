@@ -1,9 +1,12 @@
 .button {
+	font-weight: 800;
+	text-transform: uppercase;
     box-shadow: $button-box-shadow;
+    transition: $button-transition;
     &:hover {
         box-shadow: $button-box-shadow-hover;
     }
     &.success {
-    	color: $black;
+        color: $black;
     }
 }
