@@ -14,12 +14,13 @@
     .lead {
         font-family: $header-font-family;
         a {
-            color: $tappan-red;
-            border-bottom: 2px solid transparent;
+            color: $primary-color;
+            border-bottom: 1px solid rgba($primary-color, .5);
+            padding-bottom: 2px;
             transition: all .2s ease-in-out;
             &:hover {
-                color: $tappan-red;
-                border-bottom: 2px solid $tappan-red;
+                color: darken($primary-color, 10%);
+                border-bottom: 1px solid $primary-color;
             }
         }
         a[target="_blank"] {
@@ -92,23 +93,24 @@
         #callouts {
             a {
                 font-family: $header-font-family;
-                color: $tappan-red;
-                border-bottom: 2px solid transparent;
+                padding-bottom: 2px;
+                color: $primary-color;
+                border-bottom: 1px solid rgba($primary-color, .5);
                 transition: all .2s ease-in-out;
                 &:hover {
-                    color: $tappan-red;
-                    border-bottom: 2px solid $tappan-red;
+                    color: darken($primary-color, 10%);
+                    border-bottom: 1px solid $primary-color;
                 }
             }
         }
         #links {
             a {
-                color: $tappan-red;
-                border-bottom: 2px solid transparent;
+                color: $primary-color;
+                border-bottom: 1px solid rgba($primary-color, .5);
                 transition: all .2s ease-in-out;
                 &:hover {
-                    color: $tappan-red;
-                    border-bottom: 2px solid $tappan-red;
+                    color: darken($primary-color, 10%);
+                    border-bottom: 1px solid $primary-color;
                 }
             }
             a[target="_blank"] {
@@ -123,12 +125,13 @@
         }
         #typography {
             a {
-                color: $tappan-red;
-                border-bottom: 2px solid transparent;
+                color: $primary-color;
+                padding-bottom: 2px;
+                border-bottom: 1px solid rgba($primary-color, .5);
                 transition: all .2s ease-in-out;
                 &:hover {
-                    color: $tappan-red;
-                    border-bottom: 2px solid $tappan-red;
+                    color: darken($primary-color, 10%);
+                    border-bottom: 1px solid $primary-color;
                 }
             }
             .hed {
@@ -166,12 +169,12 @@
         #iconography {
             .lead {
                 a {
-                    color: $tappan-red;
-                    border-bottom: 2px solid transparent;
+                    color: $primary-color;
+                    border-bottom: 1px solid rgba($primary-color, .5);
                     transition: all .2s ease-in-out;
                     &:hover {
-                        color: $tappan-red;
-                        border-bottom: 2px solid $tappan-red;
+                        color: darken($primary-color, 10%);
+                        border-bottom: 1px solid $primary-color;
                     }
                 }
             }
