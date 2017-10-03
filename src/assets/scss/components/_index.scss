@@ -336,7 +336,7 @@
         .dek {
             font-weight: 800;
             color: $white;
-            margin-top: 1.5rem;
+            margin-top: 2.25rem;
             margin-bottom: 0;
             text-shadow: 2px 2px 7px rgba($black, .4);
         }
@@ -765,6 +765,70 @@
                     background-color: $michigan-blue;
                     border: 1px solid darken($michigan-blue, 35%);
                     color: $white;
+                    &.red {
+                        background-color: $tappan-red;
+                        border: 1px solid darken($tappan-red, 3.3%);
+                        .section_title {
+                            font-size: 1.875rem;
+                            font-family: $super-header-font-family;
+                            color: $white;
+                            text-transform: uppercase;
+                            padding: $global-padding;
+                            margin-bottom: $global-padding;
+                            line-height: 1;
+                            background-color: darken($tappan-red, 3.3%);
+                            svg {
+                                color: $michigan-maize;
+                                margin-bottom: 2px;
+                            }
+                            span {
+                                margin-left: .5rem;
+                            }
+                            a {
+                                font-size: .875rem;
+                                font-family: $header-font-family;
+                                font-weight: 700;
+                                text-transform: none;
+                                color: $white;
+                                transition: all .2s ease-in-out;
+                                &:hover {
+                                    color: $michigan-maize;
+                                }
+                            }
+                        }
+                    }
+                    &.blue {
+                        background-color: $michigan-blue;
+                        border: 1px solid darken($michigan-blue, 3.3%);
+                        .section_title {
+                            font-size: 1.875rem;
+                            font-family: $super-header-font-family;
+                            color: $white;
+                            text-transform: uppercase;
+                            padding: $global-padding;
+                            margin-bottom: $global-padding;
+                            line-height: 1;
+                            background-color: darken($michigan-blue, 3.3%);
+                            svg {
+                                color: $michigan-maize;
+                                margin-bottom: 2px;
+                            }
+                            span {
+                                margin-left: .5rem;
+                            }
+                            a {
+                                font-size: .875rem;
+                                font-family: $header-font-family;
+                                font-weight: 700;
+                                text-transform: none;
+                                color: $white;
+                                transition: all .2s ease-in-out;
+                                &:hover {
+                                    color: $michigan-maize;
+                                }
+                            }
+                        }
+                    }
                     .section_title {
                         font-size: 1.875rem;
                         font-family: $super-header-font-family;
@@ -827,7 +891,7 @@
                                     font-family: $super-header-font-family;
                                     color: $white;
                                     padding-right: 5px;
-                                    border-right: 2px solid lighten($arboretum-blue, 19.75%);
+                                    border-right: 2px solid $white;
                                     font-size: 2.25rem;
                                     text-transform: uppercase;
                                     line-height: 1;
@@ -1002,25 +1066,47 @@
         }
         .quick-links {
             padding: 0;
-            background-color: $tappan-red;
-            border: 1px solid darken($tappan-red, 3.3%);
             @include breakpoint(medium down) {
                 margin-bottom: 1rem;
             }
-            .section_title {
-                font-size: 1.875rem;
-                font-family: $super-header-font-family;
-                color: $white;
-                text-transform: uppercase;
-                padding: $global-padding;
-                line-height: 1;
-                background-color: darken($tappan-red, 3.3%);
-                svg {
-                    color: $michigan-maize;
-                    margin-bottom: 2px;
+            &.red {
+                background-color: $tappan-red;
+                border: 1px solid darken($tappan-red, 3.3%);
+                .section_title {
+                    font-size: 1.875rem;
+                    font-family: $super-header-font-family;
+                    color: $white;
+                    text-transform: uppercase;
+                    padding: $global-padding;
+                    line-height: 1;
+                    background-color: darken($tappan-red, 3.3%);
+                    svg {
+                        color: $michigan-maize;
+                        margin-bottom: 2px;
+                    }
+                    span {
+                        margin-left: .5rem;
+                    }
                 }
-                span {
-                    margin-left: .5rem;
+            }
+            &.blue {
+                background-color: $michigan-blue;
+                border: 1px solid darken($michigan-blue, 3.3%);
+                .section_title {
+                    font-size: 1.875rem;
+                    font-family: $super-header-font-family;
+                    color: $white;
+                    text-transform: uppercase;
+                    padding: $global-padding;
+                    line-height: 1;
+                    background-color: darken($michigan-blue, 3.3%);
+                    svg {
+                        color: $michigan-maize;
+                        margin-bottom: 2px;
+                    }
+                    span {
+                        margin-left: .5rem;
+                    }
                 }
             }
             ul {
@@ -1080,9 +1166,10 @@
                 }
                 &.custom-01 {
                     background-image: url('../img/promo-01.jpg');
-                    background-position: 5rem center;
+                    background-position: center;
                     background-size: 110%;
-                    color: $white;
+                    background-repeat: no-repeat;
+                    color: $black;
                     .promo-inner {
                         font-family: $header-font-family;
                         padding-bottom: $global-padding;
@@ -1097,6 +1184,10 @@
                                     font-size: 1rem;
                                     font-weight: normal;
                                     text-transform: uppercase;
+                                }
+                                .box-adjust {
+                                    display: inline-block;
+                                    text-indent: -2px;
                                 }
                                 &.cta {
                                     color: $michigan-maize;
