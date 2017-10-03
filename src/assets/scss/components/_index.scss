@@ -189,9 +189,12 @@
         }
     }
     .slider-parent-full {
-        .orbit-slide {}
+        .orbit-slide {
+            // height: 100%;
+        }
         .orbit-container {
             position: static;
+            // min-height: 40vh;
             height: 100%;
         }
         .orbit-caption {
