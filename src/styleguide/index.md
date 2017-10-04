@@ -4,7 +4,6 @@
 
 
 
-
 # Breadcrumbs
 
 ```html_example
@@ -584,33 +583,36 @@ Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus
 
 # Typography
 
-<p class="lead">This design uses Bebas Neue Bold for super-headings, <a href="https://fonts.google.com/specimen/Open+Sans" target="_blank">Open Sans</a> for headings and subheadings, and <a href="https://fonts.google.com/specimen/Noto+Serif" target="_blank">Noto Serif</a> paragraph text.</p>
+<p class="lead">This design uses Bebas Neue Bold for super-headings, <a href="https://fonts.google.com/specimen/Open+Sans" target="_blank">Open Sans</a> for headings and subheadings, and <a href="https://fonts.google.com/specimen/Noto+Serif" target="_blank">Noto Serif</a> paragraph text. Base type is set at 100%(16 px).</p>
 
 ---
 
 ### Headings
 
-Headings are used to denote different sections of content, usually consisting of related paragraphs and other HTML elements. They range from h1 to h6 and should be styled in a clear hierarchy (i.e., largest to smallest)
+Headings are used to denote different sections of content, usually consisting of related paragraphs and other HTML elements. They range from h1 to h6 and should be styled in a clear hierarchy (i.e., largest to smallest). Whenever possible try not to skip heading levels.
 
----
+#### Header Styles
 
-### Paragraphs
+The theme includes two typographic scales—one uses a narrow range of sizes for small-sized screens, and the other uses a wider range of sizes for medium- and larger-sized screens.
 
-Paragraphs are groups of sentences, each with a lead (first sentence) and transition (last sentence). They are block level elements, meaning they stack vertically when repeated. Use them as such. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo.
-
----
-
-<h1 class="super-headings">Super Heading h1</h1>
-
-<h2 class="super-headings">Super Heading h2</h2>
-
-<h3 class="super-headings">Super Heading h3</h3>
-
-<h4 class="super-headings">Super Heading h4</h4>
-
-<h5 class="super-headings">Super Heading h5</h5>
-
-<h6 class="super-headings">Super Heading h6</h6>
+```html
+small: (
+    'h1': ('font-size': 24),
+    'h2': ('font-size': 20),
+    'h3': ('font-size': 19),
+    'h4': ('font-size': 18),
+    'h5': ('font-size': 17),
+    'h6': ('font-size': 16),
+  ),
+  medium: (
+    'h1': ('font-size': 48),
+    'h2': ('font-size': 40),
+    'h3': ('font-size': 31),
+    'h4': ('font-size': 25),
+    'h5': ('font-size': 20),
+    'h6': ('font-size': 16),
+)
+```
 
 ---
 
@@ -625,6 +627,12 @@ Paragraphs are groups of sentences, each with a lead (first sentence) and transi
 <h5>Heading h5</h5>
 
 <h6>Heading h6</h6>
+
+---
+
+### Paragraphs
+
+Paragraphs are groups of sentences, each with a lead (first sentence) and transition (last sentence). They are block level elements, meaning they stack vertically when repeated. Use them as such. Line heights are set at 1.6 times the font size. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo.
 
 ---
 
